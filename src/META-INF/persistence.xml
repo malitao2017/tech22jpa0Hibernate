@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+ <persistence-unit name="mysqlJPA" transaction-type="RESOURCE_LOCAL">  
+        <properties>  
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />  
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />  
+            <property name="hibernate.connection.username" value="root" />  
+            <property name="hibernate.connection.password" value="root" />  
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/test" />  
+            <property name="hibernate.max_fetch_depth" value="3" />  
+            <property name="hibernate.hbm2ddl.auto" value="update" />  
+        </properties>  
+    </persistence-unit> 
+    <!-- 不使用，只是做案例 -->
+     <persistence-unit name="mysqlJPA1" transaction-type="RESOURCE_LOCAL">  
+        <properties>  
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />  
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />  
+            <property name="hibernate.connection.username" value="admins" />  
+            <property name="hibernate.connection.password" value="root1" />  
+            <property name="hibernate.connection.url" value="jdbc:mysql://10.6.0.204:3306/commonuser" />  
+            <property name="hibernate.max_fetch_depth" value="3" />  
+            <property name="hibernate.hbm2ddl.auto" value="update" />  
+        </properties>  
+    </persistence-unit> 
+    
+</persistence>
